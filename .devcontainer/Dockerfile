@@ -22,4 +22,4 @@ RUN apt-get update && apt-get install -y \
 	libturbojpeg0-dev 
 
 RUN echo 'source /opt/ros/$ROS_DISTRO/setup.bash' >> /root/.bashrc
-WORKDIR /ros2_ws
+WORKDIR /root/ros2_ws
