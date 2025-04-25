@@ -20,7 +20,10 @@ A simulation project of a simple rover in the ROS2 environment, using the MPPI a
   - `gazebo_ros`
 
 # Clone repository
-`git clone --recurse-submodules https://github.com/Biesiadziak/Ambition_rover.git `
+
+```bash
+git clone --recurse-submodules https://github.com/Biesiadziak/Ambition_rover.git
+```
 
 # 🐳 Docker Setup
 
