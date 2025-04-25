@@ -34,7 +34,7 @@ docker build -t ambition_humble .devcontainer/
 To start the container, execute:
 
 ```bash
-./.devcontainer/start.sh
+./start.sh
 ```
 
 ---
