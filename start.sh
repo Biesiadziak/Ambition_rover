@@ -6,12 +6,12 @@ else
 fi
 
 xhost +local:root
-docker run -it --rm \
+docker run -it \
 	--name=ambition_humble \
 	--shm-size=1g \
 	--ulimit memlock=-1 \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix" \
-	--volume="/home/$user/Projects/CameraRealsense:/root/ros2_ws:rw" \
+	--volume="/home/$user/Projects/Ambition_rover:/root/ros2_ws:rw" \
 	--env="DISPLAY=$DISPLAY" \
 	--network=host \
 	--privileged \
