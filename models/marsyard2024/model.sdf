@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+
+<!-- Custom model -->
+<model name="marsyard2024">
+  <static>true</static>
+  <link name="scene_link">
+
+    <!-- Visual -->
+    <visual name="visual">
+      <geometry>
+        <mesh>
+          <uri>file:///root/ros2_ws/models/marsyard2024/meshes/marsyard2024_processed.dae</uri>            
+        </mesh>
+      </geometry>
+    </visual>
+
+    <!-- Collision -->
+    <collision name="collision">
+      <geometry>
+        <mesh>
+          <uri>file:///root/ros2_ws/models/marsyard2024/meshes/marsyard2024_processed.dae</uri>            
+        </mesh>
+      </geometry>
+    </collision>
+
+  </link>
+</model>
+
+</sdf>

@@ -1,0 +1,676 @@
+Sourcing ROS...
+Setting build type...
+Importing dependencies...
+....
+=== src/behaviortree_ros2 (git) ===
+
+HEAD is now at a0de087 Update README.md
+=== src/husarion_controllers (git) ===
+
+HEAD is now at e1eea3c Updated depricated includes (#10)
+=== src/husarion_gz_worlds (git) ===
+
+HEAD is now at 9d514a0 Set default `gz_log_level=2`
+=== src/ros_components_description (git) ===
+
+HEAD is now at 2fe6445 Ros2 fix zed (#66)
+M	urdf/stereolabs_zed.urdf.xacro
+Initializing rosdep...
+rosdep already initialized
+reading in sources list data from /etc/ros/rosdep/sources.list.d
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml
+Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
+Skip distro "ardent" different from requested "humble"
+Skip distro "bouncy" different from requested "humble"
+Skip distro "crystal" different from requested "humble"
+Skip distro "dashing" different from requested "humble"
+Skip distro "eloquent" different from requested "humble"
+Skip distro "foxy" different from requested "humble"
+Skip distro "galactic" different from requested "humble"
+Skip distro "groovy" different from requested "humble"
+Add distro "humble"
+Skip distro "hydro" different from requested "humble"
+Skip distro "indigo" different from requested "humble"
+Skip distro "iron" different from requested "humble"
+Skip distro "jade" different from requested "humble"
+Skip distro "jazzy" different from requested "humble"
+Skip distro "kilted" different from requested "humble"
+Skip distro "kinetic" different from requested "humble"
+Skip distro "lunar" different from requested "humble"
+Skip distro "melodic" different from requested "humble"
+Skip distro "noetic" different from requested "humble"
+Skip distro "rolling" different from requested "humble"
+updated cache in /root/.ros/rosdep/sources.cache
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python-babel-localedata python3-babel python3-jinja2 python3-markupsafe
+  python3-typeguard ros-humble-generate-parameter-library-py
+  ros-humble-parameter-traits ros-humble-rsl ros-humble-tcb-span
+  ros-humble-tl-expected
+Suggested packages:
+  python-jinja2-doc
+The following NEW packages will be installed:
+  python-babel-localedata python3-babel python3-jinja2 python3-markupsafe
+  python3-typeguard ros-humble-generate-parameter-library
+  ros-humble-generate-parameter-library-py ros-humble-parameter-traits
+  ros-humble-rsl ros-humble-tcb-span ros-humble-tl-expected
+0 upgraded, 11 newly installed, 0 to remove and 133 not upgraded.
+Need to get 5308 kB of archives.
+After this operation, 28.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 python-babel-localedata all 2.8.0+dfsg.1-7 [4982 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-generate-parameter-library-py amd64 0.4.0-1jammy.20250325.170157 [43.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-babel all 2.8.0+dfsg.1-7 [85.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-markupsafe amd64 2.0.1-2build1 [12.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-jinja2 all 3.0.3-1ubuntu0.4 [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-typeguard all 2.2.2-1.1 [13.3 kB]
+Get:7 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-tcb-span amd64 1.0.2-2jammy.20241125.234707 [10.4 kB]
+Get:8 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-tl-expected amd64 1.0.2-2jammy.20241125.234807 [16.4 kB]
+Get:9 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-rsl amd64 1.1.0-1jammy.20250429.203314 [17.3 kB]
+Get:10 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-parameter-traits amd64 0.4.0-1jammy.20250429.204612 [9774 B]
+Get:11 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-generate-parameter-library amd64 0.4.0-1jammy.20250429.204819 [8684 B]
+Fetched 5308 kB in 2s (2685 kB/s)
+Selecting previously unselected package python-babel-localedata.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 137340 files and directories currently installed.)
+Preparing to unpack .../00-python-babel-localedata_2.8.0+dfsg.1-7_all.deb ...
+Unpacking python-babel-localedata (2.8.0+dfsg.1-7) ...
+Selecting previously unselected package python3-babel.
+Preparing to unpack .../01-python3-babel_2.8.0+dfsg.1-7_all.deb ...
+Unpacking python3-babel (2.8.0+dfsg.1-7) ...
+Selecting previously unselected package python3-markupsafe.
+Preparing to unpack .../02-python3-markupsafe_2.0.1-2build1_amd64.deb ...
+Unpacking python3-markupsafe (2.0.1-2build1) ...
+Selecting previously unselected package python3-jinja2.
+Preparing to unpack .../03-python3-jinja2_3.0.3-1ubuntu0.4_all.deb ...
+Unpacking python3-jinja2 (3.0.3-1ubuntu0.4) ...
+Selecting previously unselected package python3-typeguard.
+Preparing to unpack .../04-python3-typeguard_2.2.2-1.1_all.deb ...
+Unpacking python3-typeguard (2.2.2-1.1) ...
+Selecting previously unselected package ros-humble-generate-parameter-library-py.
+Preparing to unpack .../05-ros-humble-generate-parameter-library-py_0.4.0-1jammy.20250325.170157_amd64.deb ...
+Unpacking ros-humble-generate-parameter-library-py (0.4.0-1jammy.20250325.170157) ...
+Selecting previously unselected package ros-humble-tcb-span.
+Preparing to unpack .../06-ros-humble-tcb-span_1.0.2-2jammy.20241125.234707_amd64.deb ...
+Unpacking ros-humble-tcb-span (1.0.2-2jammy.20241125.234707) ...
+Selecting previously unselected package ros-humble-tl-expected.
+Preparing to unpack .../07-ros-humble-tl-expected_1.0.2-2jammy.20241125.234807_amd64.deb ...
+Unpacking ros-humble-tl-expected (1.0.2-2jammy.20241125.234807) ...
+Selecting previously unselected package ros-humble-rsl.
+Preparing to unpack .../08-ros-humble-rsl_1.1.0-1jammy.20250429.203314_amd64.deb ...
+Unpacking ros-humble-rsl (1.1.0-1jammy.20250429.203314) ...
+Selecting previously unselected package ros-humble-parameter-traits.
+Preparing to unpack .../09-ros-humble-parameter-traits_0.4.0-1jammy.20250429.204612_amd64.deb ...
+Unpacking ros-humble-parameter-traits (0.4.0-1jammy.20250429.204612) ...
+Selecting previously unselected package ros-humble-generate-parameter-library.
+Preparing to unpack .../10-ros-humble-generate-parameter-library_0.4.0-1jammy.20250429.204819_amd64.deb ...
+Unpacking ros-humble-generate-parameter-library (0.4.0-1jammy.20250429.204819) ...
+Setting up ros-humble-tl-expected (1.0.2-2jammy.20241125.234807) ...
+Setting up python3-typeguard (2.2.2-1.1) ...
+Setting up python3-markupsafe (2.0.1-2build1) ...
+Setting up python-babel-localedata (2.8.0+dfsg.1-7) ...
+Setting up ros-humble-tcb-span (1.0.2-2jammy.20241125.234707) ...
+Setting up python3-babel (2.8.0+dfsg.1-7) ...
+update-alternatives: using /usr/bin/pybabel-python3 to provide /usr/bin/pybabel (pybabel) in auto mode
+Setting up ros-humble-rsl (1.1.0-1jammy.20250429.203314) ...
+Setting up python3-jinja2 (3.0.3-1ubuntu0.4) ...
+Setting up ros-humble-parameter-traits (0.4.0-1jammy.20250429.204612) ...
+Setting up ros-humble-generate-parameter-library-py (0.4.0-1jammy.20250325.170157) ...
+Setting up ros-humble-generate-parameter-library (0.4.0-1jammy.20250429.204819) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ros-humble-ros2test
+The following NEW packages will be installed:
+  ros-humble-ros-testing ros-humble-ros2test
+0 upgraded, 2 newly installed, 0 to remove and 133 not upgraded.
+Need to get 11.9 kB of archives.
+After this operation, 87.0 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ros2test amd64 0.4.0-3jammy.20250429.191252 [5080 B]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ros-testing amd64 0.4.0-3jammy.20250429.191436 [6866 B]
+Fetched 11.9 kB in 1s (12.6 kB/s)
+Selecting previously unselected package ros-humble-ros2test.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138422 files and directories currently installed.)
+Preparing to unpack .../ros-humble-ros2test_0.4.0-3jammy.20250429.191252_amd64.deb ...
+Unpacking ros-humble-ros2test (0.4.0-3jammy.20250429.191252) ...
+Selecting previously unselected package ros-humble-ros-testing.
+Preparing to unpack .../ros-humble-ros-testing_0.4.0-3jammy.20250429.191436_amd64.deb ...
+Unpacking ros-humble-ros-testing (0.4.0-3jammy.20250429.191436) ...
+Setting up ros-humble-ros2test (0.4.0-3jammy.20250429.191252) ...
+Setting up ros-humble-ros-testing (0.4.0-3jammy.20250429.191436) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-behaviortree-cpp
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 768 kB of archives.
+After this operation, 4150 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-behaviortree-cpp amd64 4.7.1-1jammy.20250513.175053 [768 kB]
+Fetched 768 kB in 2s (496 kB/s)
+Selecting previously unselected package ros-humble-behaviortree-cpp.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138468 files and directories currently installed.)
+Preparing to unpack .../ros-humble-behaviortree-cpp_4.7.1-1jammy.20250513.175053_amd64.deb ...
+Unpacking ros-humble-behaviortree-cpp (4.7.1-1jammy.20250513.175053) ...
+Setting up ros-humble-behaviortree-cpp (4.7.1-1jammy.20250513.175053) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgflags-dev libgflags2.2
+The following NEW packages will be installed:
+  libgflags-dev libgflags2.2 ros-humble-ros-gz-sim
+0 upgraded, 3 newly installed, 0 to remove and 133 not upgraded.
+Need to get 449 kB of archives.
+After this operation, 1946 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgflags2.2 amd64 2.2.2-2 [78.1 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ros-gz-sim amd64 0.244.17-1jammy.20250506.143836 [277 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgflags-dev amd64 2.2.2-2 [93.7 kB]
+Fetched 449 kB in 1s (609 kB/s)
+Selecting previously unselected package libgflags2.2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138722 files and directories currently installed.)
+Preparing to unpack .../libgflags2.2_2.2.2-2_amd64.deb ...
+Unpacking libgflags2.2 (2.2.2-2) ...
+Selecting previously unselected package libgflags-dev.
+Preparing to unpack .../libgflags-dev_2.2.2-2_amd64.deb ...
+Unpacking libgflags-dev (2.2.2-2) ...
+Selecting previously unselected package ros-humble-ros-gz-sim.
+Preparing to unpack .../ros-humble-ros-gz-sim_0.244.17-1jammy.20250506.143836_amd64.deb ...
+Unpacking ros-humble-ros-gz-sim (0.244.17-1jammy.20250506.143836) ...
+Setting up libgflags2.2 (2.2.2-2) ...
+Setting up libgflags-dev (2.2.2-2) ...
+Setting up ros-humble-ros-gz-sim (0.244.17-1jammy.20250506.143836) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-nav2-common
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 10.2 kB of archives.
+After this operation, 75.8 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-nav2-common amd64 1.1.18-1jammy.20250429.185619 [10.2 kB]
+Fetched 10.2 kB in 0s (37.7 kB/s)
+Selecting previously unselected package ros-humble-nav2-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138782 files and directories currently installed.)
+Preparing to unpack .../ros-humble-nav2-common_1.1.18-1jammy.20250429.185619_amd64.deb ...
+Unpacking ros-humble-nav2-common (1.1.18-1jammy.20250429.185619) ...
+Setting up ros-humble-nav2-common (1.1.18-1jammy.20250429.185619) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ros-humble-actuator-msgs ros-humble-gps-msgs ros-humble-ros-gz-interfaces
+  ros-humble-vision-msgs
+The following NEW packages will be installed:
+  ros-humble-actuator-msgs ros-humble-gps-msgs ros-humble-ros-gz-bridge
+  ros-humble-ros-gz-interfaces ros-humble-vision-msgs
+0 upgraded, 5 newly installed, 0 to remove and 133 not upgraded.
+Need to get 4036 kB of archives.
+After this operation, 37.0 MB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-actuator-msgs amd64 0.0.1-1jammy.20250325.191219 [85.9 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-gps-msgs amd64 2.0.4-1jammy.20250325.184629 [70.4 kB]
+Get:3 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ros-gz-interfaces amd64 0.244.17-1jammy.20250506.143846 [248 kB]
+Get:4 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-vision-msgs amd64 4.1.1-1jammy.20250325.185253 [150 kB]
+Get:5 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ros-gz-bridge amd64 0.244.17-1jammy.20250506.151647 [3482 kB]
+Fetched 4036 kB in 4s (1049 kB/s)
+Selecting previously unselected package ros-humble-actuator-msgs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138820 files and directories currently installed.)
+Preparing to unpack .../ros-humble-actuator-msgs_0.0.1-1jammy.20250325.191219_amd64.deb ...
+Unpacking ros-humble-actuator-msgs (0.0.1-1jammy.20250325.191219) ...
+Selecting previously unselected package ros-humble-gps-msgs.
+Preparing to unpack .../ros-humble-gps-msgs_2.0.4-1jammy.20250325.184629_amd64.deb ...
+Unpacking ros-humble-gps-msgs (2.0.4-1jammy.20250325.184629) ...
+Selecting previously unselected package ros-humble-ros-gz-interfaces.
+Preparing to unpack .../ros-humble-ros-gz-interfaces_0.244.17-1jammy.20250506.143846_amd64.deb ...
+Unpacking ros-humble-ros-gz-interfaces (0.244.17-1jammy.20250506.143846) ...
+Selecting previously unselected package ros-humble-vision-msgs.
+Preparing to unpack .../ros-humble-vision-msgs_4.1.1-1jammy.20250325.185253_amd64.deb ...
+Unpacking ros-humble-vision-msgs (4.1.1-1jammy.20250325.185253) ...
+Selecting previously unselected package ros-humble-ros-gz-bridge.
+Preparing to unpack .../ros-humble-ros-gz-bridge_0.244.17-1jammy.20250506.151647_amd64.deb ...
+Unpacking ros-humble-ros-gz-bridge (0.244.17-1jammy.20250506.151647) ...
+Setting up ros-humble-actuator-msgs (0.0.1-1jammy.20250325.191219) ...
+Setting up ros-humble-gps-msgs (2.0.4-1jammy.20250325.184629) ...
+Setting up ros-humble-ros-gz-interfaces (0.244.17-1jammy.20250506.143846) ...
+Setting up ros-humble-vision-msgs (4.1.1-1jammy.20250325.185253) ...
+Setting up ros-humble-ros-gz-bridge (0.244.17-1jammy.20250506.151647) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-colorama
+The following NEW packages will be installed:
+  python3-click python3-colorama
+0 upgraded, 2 newly installed, 0 to remove and 133 not upgraded.
+Need to get 103 kB of archives.
+After this operation, 468 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-colorama all 0.4.4-1 [24.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-click all 8.0.3-1 [78.3 kB]
+Fetched 103 kB in 0s (532 kB/s)
+Selecting previously unselected package python3-colorama.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140218 files and directories currently installed.)
+Preparing to unpack .../python3-colorama_0.4.4-1_all.deb ...
+Unpacking python3-colorama (0.4.4-1) ...
+Selecting previously unselected package python3-click.
+Preparing to unpack .../python3-click_8.0.3-1_all.deb ...
+Unpacking python3-click (8.0.3-1) ...
+Setting up python3-colorama (0.4.4-1) ...
+Setting up python3-click (8.0.3-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-diff-drive-controller
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 212 kB of archives.
+After this operation, 1127 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-diff-drive-controller amd64 2.45.0-1jammy.20250429.215109 [212 kB]
+Fetched 212 kB in 1s (245 kB/s)
+Selecting previously unselected package ros-humble-diff-drive-controller.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140273 files and directories currently installed.)
+Preparing to unpack .../ros-humble-diff-drive-controller_2.45.0-1jammy.20250429.215109_amd64.deb ...
+Unpacking ros-humble-diff-drive-controller (2.45.0-1jammy.20250429.215109) ...
+Setting up ros-humble-diff-drive-controller (2.45.0-1jammy.20250429.215109) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-imu-sensor-broadcaster
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 80.3 kB of archives.
+After this operation, 300 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-imu-sensor-broadcaster amd64 2.45.0-1jammy.20250429.215214 [80.3 kB]
+Fetched 80.3 kB in 1s (64.4 kB/s)
+Selecting previously unselected package ros-humble-imu-sensor-broadcaster.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140310 files and directories currently installed.)
+Preparing to unpack .../ros-humble-imu-sensor-broadcaster_2.45.0-1jammy.20250429.215214_amd64.deb ...
+Unpacking ros-humble-imu-sensor-broadcaster (2.45.0-1jammy.20250429.215214) ...
+Setting up ros-humble-imu-sensor-broadcaster (2.45.0-1jammy.20250429.215214) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-joint-state-broadcaster
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 94.5 kB of archives.
+After this operation, 366 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-joint-state-broadcaster amd64 2.45.0-1jammy.20250429.215216 [94.5 kB]
+Fetched 94.5 kB in 1s (78.1 kB/s)
+Selecting previously unselected package ros-humble-joint-state-broadcaster.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140345 files and directories currently installed.)
+Preparing to unpack .../ros-humble-joint-state-broadcaster_2.45.0-1jammy.20250429.215216_amd64.deb ...
+Unpacking ros-humble-joint-state-broadcaster (2.45.0-1jammy.20250429.215216) ...
+Setting up ros-humble-joint-state-broadcaster (2.45.0-1jammy.20250429.215216) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-joint-state-publisher
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 16.1 kB of archives.
+After this operation, 68.6 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-joint-state-publisher amd64 2.4.0-1jammy.20250429.192014 [16.1 kB]
+Fetched 16.1 kB in 1s (19.0 kB/s)
+Selecting previously unselected package ros-humble-joint-state-publisher.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140380 files and directories currently installed.)
+Preparing to unpack .../ros-humble-joint-state-publisher_2.4.0-1jammy.20250429.192014_amd64.deb ...
+Unpacking ros-humble-joint-state-publisher (2.4.0-1jammy.20250429.192014) ...
+Setting up ros-humble-joint-state-publisher (2.4.0-1jammy.20250429.192014) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-joint-state-publisher-gui
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 15.5 kB of archives.
+After this operation, 67.6 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-joint-state-publisher-gui amd64 2.4.0-1jammy.20250429.192211 [15.5 kB]
+Fetched 15.5 kB in 1s (26.0 kB/s)
+Selecting previously unselected package ros-humble-joint-state-publisher-gui.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140401 files and directories currently installed.)
+Preparing to unpack .../ros-humble-joint-state-publisher-gui_2.4.0-1jammy.20250429.192211_amd64.deb ...
+Unpacking ros-humble-joint-state-publisher-gui (2.4.0-1jammy.20250429.192211) ...
+Setting up ros-humble-joint-state-publisher-gui (2.4.0-1jammy.20250429.192211) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-serial python3-transforms3d ros-humble-nmea-msgs
+  ros-humble-tf-transformations
+Suggested packages:
+  python3-wxgtk3.0 | python3-wxgtk
+The following NEW packages will be installed:
+  python3-serial python3-transforms3d ros-humble-nmea-msgs
+  ros-humble-nmea-navsat-driver ros-humble-tf-transformations
+0 upgraded, 5 newly installed, 0 to remove and 133 not upgraded.
+Need to get 253 kB of archives.
+After this operation, 2048 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-serial all 3.5-1 [78.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-transforms3d all 0.3.1+ds-2 [42.8 kB]
+Get:3 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-nmea-msgs amd64 2.0.0-4jammy.20250325.184419 [90.4 kB]
+Get:4 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-tf-transformations amd64 1.1.0-1jammy.20250325.170033 [19.6 kB]
+Get:5 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-nmea-navsat-driver amd64 2.0.1-1jammy.20250429.185440 [21.4 kB]
+Fetched 253 kB in 1s (306 kB/s)
+Selecting previously unselected package python3-serial.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140424 files and directories currently installed.)
+Preparing to unpack .../python3-serial_3.5-1_all.deb ...
+Unpacking python3-serial (3.5-1) ...
+Selecting previously unselected package python3-transforms3d.
+Preparing to unpack .../python3-transforms3d_0.3.1+ds-2_all.deb ...
+Unpacking python3-transforms3d (0.3.1+ds-2) ...
+Selecting previously unselected package ros-humble-nmea-msgs.
+Preparing to unpack .../ros-humble-nmea-msgs_2.0.0-4jammy.20250325.184419_amd64.deb ...
+Unpacking ros-humble-nmea-msgs (2.0.0-4jammy.20250325.184419) ...
+Selecting previously unselected package ros-humble-tf-transformations.
+Preparing to unpack .../ros-humble-tf-transformations_1.1.0-1jammy.20250325.170033_amd64.deb ...
+Unpacking ros-humble-tf-transformations (1.1.0-1jammy.20250325.170033) ...
+Selecting previously unselected package ros-humble-nmea-navsat-driver.
+Preparing to unpack .../ros-humble-nmea-navsat-driver_2.0.1-1jammy.20250429.185440_amd64.deb ...
+Unpacking ros-humble-nmea-navsat-driver (2.0.1-1jammy.20250429.185440) ...
+Setting up python3-transforms3d (0.3.1+ds-2) ...
+Setting up ros-humble-tf-transformations (1.1.0-1jammy.20250325.170033) ...
+Setting up python3-serial (3.5-1) ...
+Setting up ros-humble-nmea-msgs (2.0.0-4jammy.20250325.184419) ...
+Setting up ros-humble-nmea-navsat-driver (2.0.1-1jammy.20250429.185440) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3-transforms3d is already the newest version (0.3.1+ds-2).
+python3-transforms3d set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 133 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgeographic-dev libgeographic19 ros-humble-geographic-msgs
+Suggested packages:
+  geographiclib-doc geographiclib-tools
+The following NEW packages will be installed:
+  libgeographic-dev libgeographic19 ros-humble-geographic-msgs
+  ros-humble-robot-localization
+0 upgraded, 4 newly installed, 0 to remove and 133 not upgraded.
+Need to get 6790 kB of archives.
+After this operation, 43.1 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgeographic19 amd64 1.52-1 [258 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-geographic-msgs amd64 1.0.6-1jammy.20250325.185115 [207 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libgeographic-dev amd64 1.52-1 [435 kB]
+Get:4 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-robot-localization amd64 3.5.3-1jammy.20250513.003846 [5890 kB]
+Fetched 6790 kB in 3s (2501 kB/s)
+Selecting previously unselected package libgeographic19:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140788 files and directories currently installed.)
+Preparing to unpack .../libgeographic19_1.52-1_amd64.deb ...
+Unpacking libgeographic19:amd64 (1.52-1) ...
+Selecting previously unselected package libgeographic-dev.
+Preparing to unpack .../libgeographic-dev_1.52-1_amd64.deb ...
+Unpacking libgeographic-dev (1.52-1) ...
+Selecting previously unselected package ros-humble-geographic-msgs.
+Preparing to unpack .../ros-humble-geographic-msgs_1.0.6-1jammy.20250325.185115_amd64.deb ...
+Unpacking ros-humble-geographic-msgs (1.0.6-1jammy.20250325.185115) ...
+Selecting previously unselected package ros-humble-robot-localization.
+Preparing to unpack .../ros-humble-robot-localization_3.5.3-1jammy.20250513.003846_amd64.deb ...
+Unpacking ros-humble-robot-localization (3.5.3-1jammy.20250513.003846) ...
+Setting up ros-humble-geographic-msgs (1.0.6-1jammy.20250325.185115) ...
+Setting up libgeographic19:amd64 (1.52-1) ...
+Setting up libgeographic-dev (1.52-1) ...
+Setting up ros-humble-robot-localization (3.5.3-1jammy.20250513.003846) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-imu-filter-madgwick
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 239 kB of archives.
+After this operation, 1342 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-imu-filter-madgwick amd64 2.1.5-1jammy.20250429.205929 [239 kB]
+Fetched 239 kB in 1s (174 kB/s)
+Selecting previously unselected package ros-humble-imu-filter-madgwick.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 141697 files and directories currently installed.)
+Preparing to unpack .../ros-humble-imu-filter-madgwick_2.1.5-1jammy.20250429.205929_amd64.deb ...
+Unpacking ros-humble-imu-filter-madgwick (2.1.5-1jammy.20250429.205929) ...
+Setting up ros-humble-imu-filter-madgwick (2.1.5-1jammy.20250429.205929) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ros-humble-libphidget22
+The following NEW packages will be installed:
+  ros-humble-libphidget22 ros-humble-phidgets-api
+0 upgraded, 2 newly installed, 0 to remove and 133 not upgraded.
+Need to get 981 kB of archives.
+After this operation, 6167 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-libphidget22 amd64 2.3.3-1jammy.20241125.234224 [941 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-phidgets-api amd64 2.3.3-1jammy.20250325.172516 [39.9 kB]
+Fetched 981 kB in 2s (465 kB/s)
+Selecting previously unselected package ros-humble-libphidget22.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 141741 files and directories currently installed.)
+Preparing to unpack .../ros-humble-libphidget22_2.3.3-1jammy.20241125.234224_amd64.deb ...
+Unpacking ros-humble-libphidget22 (2.3.3-1jammy.20241125.234224) ...
+Selecting previously unselected package ros-humble-phidgets-api.
+Preparing to unpack .../ros-humble-phidgets-api_2.3.3-1jammy.20250325.172516_amd64.deb ...
+Unpacking ros-humble-phidgets-api (2.3.3-1jammy.20250325.172516) ...
+Setting up ros-humble-libphidget22 (2.3.3-1jammy.20241125.234224) ...
+Setting up ros-humble-phidgets-api (2.3.3-1jammy.20250325.172516) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  autoconf-archive
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 676 kB of archives.
+After this operation, 5967 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 autoconf-archive all 20210219-2.1 [676 kB]
+Fetched 676 kB in 0s (2078 kB/s)
+Selecting previously unselected package autoconf-archive.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 141871 files and directories currently installed.)
+Preparing to unpack .../autoconf-archive_20210219-2.1_all.deb ...
+Unpacking autoconf-archive (20210219-2.1) ...
+Setting up autoconf-archive (20210219-2.1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  file libmagic-mgc libmagic1
+Suggested packages:
+  libtool-doc gcj-jdk
+The following NEW packages will be installed:
+  file libmagic-mgc libmagic1 libtool
+0 upgraded, 4 newly installed, 0 to remove and 133 not upgraded.
+Need to get 530 kB of archives.
+After this operation, 8846 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic-mgc amd64 1:5.41-3ubuntu0.1 [257 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic1 amd64 1:5.41-3ubuntu0.1 [87.2 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 file amd64 1:5.41-3ubuntu0.1 [21.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtool all 2.4.6-15build2 [164 kB]
+Fetched 530 kB in 1s (601 kB/s)
+Selecting previously unselected package libmagic-mgc.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 143043 files and directories currently installed.)
+Preparing to unpack .../libmagic-mgc_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking libmagic-mgc (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.41-3ubuntu0.1_amd64.deb ...
+Unpacking file (1:5.41-3ubuntu0.1) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../libtool_2.4.6-15build2_all.deb ...
+Unpacking libtool (2.4.6-15build2) ...
+Setting up libmagic-mgc (1:5.41-3ubuntu0.1) ...
+Setting up libmagic1:amd64 (1:5.41-3ubuntu0.1) ...
+Setting up file (1:5.41-3ubuntu0.1) ...
+Setting up libtool (2.4.6-15build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libtool-bin
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 81.5 kB of archives.
+After this operation, 400 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtool-bin amd64 2.4.6-15build2 [81.5 kB]
+Fetched 81.5 kB in 1s (155 kB/s)
+Selecting previously unselected package libtool-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 143094 files and directories currently installed.)
+Preparing to unpack .../libtool-bin_2.4.6-15build2_amd64.deb ...
+Unpacking libtool-bin (2.4.6-15build2) ...
+Setting up libtool-bin (2.4.6-15build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  iputils-ping
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 42.9 kB of archives.
+After this operation, 116 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 iputils-ping amd64 3:20211215-1 [42.9 kB]
+Fetched 42.9 kB in 0s (116 kB/s)
+Selecting previously unselected package iputils-ping.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 143099 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20211215-1_amd64.deb ...
+Unpacking iputils-ping (3:20211215-1) ...
+Setting up iputils-ping (3:20211215-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ros-humble-control-toolbox ros-humble-filters
+  ros-humble-joint-trajectory-controller
+  ros-humble-picknik-reset-fault-controller
+  ros-humble-picknik-twist-controller ros-humble-robotiq-description
+The following NEW packages will be installed:
+  ros-humble-control-toolbox ros-humble-filters
+  ros-humble-joint-trajectory-controller ros-humble-kortex-description
+  ros-humble-picknik-reset-fault-controller
+  ros-humble-picknik-twist-controller ros-humble-robotiq-description
+0 upgraded, 7 newly installed, 0 to remove and 133 not upgraded.
+Need to get 9357 kB of archives.
+After this operation, 35.8 MB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-filters amd64 2.2.1-1jammy.20250514.150609 [75.0 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-control-toolbox amd64 3.6.1-1jammy.20250514.160844 [135 kB]
+Get:3 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-joint-trajectory-controller amd64 2.45.0-1jammy.20250514.163433 [260 kB]
+Get:4 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-picknik-reset-fault-controller amd64 0.0.3-1jammy.20250429.213923 [66.9 kB]
+Get:5 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-picknik-twist-controller amd64 0.0.3-1jammy.20250429.213934 [105 kB]
+Get:6 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-robotiq-description amd64 0.0.1-1jammy.20250514.172856 [808 kB]
+Get:7 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-kortex-description amd64 0.2.3-1jammy.20250514.173022 [7907 kB]
+Fetched 9357 kB in 5s (2017 kB/s)
+Selecting previously unselected package ros-humble-filters.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 143109 files and directories currently installed.)
+Preparing to unpack .../0-ros-humble-filters_2.2.1-1jammy.20250514.150609_amd64.deb ...
+Unpacking ros-humble-filters (2.2.1-1jammy.20250514.150609) ...
+Selecting previously unselected package ros-humble-control-toolbox.
+Preparing to unpack .../1-ros-humble-control-toolbox_3.6.1-1jammy.20250514.160844_amd64.deb ...
+Unpacking ros-humble-control-toolbox (3.6.1-1jammy.20250514.160844) ...
+Selecting previously unselected package ros-humble-joint-trajectory-controller.
+Preparing to unpack .../2-ros-humble-joint-trajectory-controller_2.45.0-1jammy.20250514.163433_amd64.deb ...
+Unpacking ros-humble-joint-trajectory-controller (2.45.0-1jammy.20250514.163433) ...
+Selecting previously unselected package ros-humble-picknik-reset-fault-controller.
+Preparing to unpack .../3-ros-humble-picknik-reset-fault-controller_0.0.3-1jammy.20250429.213923_amd64.deb ...
+Unpacking ros-humble-picknik-reset-fault-controller (0.0.3-1jammy.20250429.213923) ...
+Selecting previously unselected package ros-humble-picknik-twist-controller.
+Preparing to unpack .../4-ros-humble-picknik-twist-controller_0.0.3-1jammy.20250429.213934_amd64.deb ...
+Unpacking ros-humble-picknik-twist-controller (0.0.3-1jammy.20250429.213934) ...
+Selecting previously unselected package ros-humble-robotiq-description.
+Preparing to unpack .../5-ros-humble-robotiq-description_0.0.1-1jammy.20250514.172856_amd64.deb ...
+Unpacking ros-humble-robotiq-description (0.0.1-1jammy.20250514.172856) ...
+Selecting previously unselected package ros-humble-kortex-description.
+Preparing to unpack .../6-ros-humble-kortex-description_0.2.3-1jammy.20250514.173022_amd64.deb ...
+Unpacking ros-humble-kortex-description (0.2.3-1jammy.20250514.173022) ...
+Setting up ros-humble-filters (2.2.1-1jammy.20250514.150609) ...
+Setting up ros-humble-control-toolbox (3.6.1-1jammy.20250514.160844) ...
+Setting up ros-humble-joint-trajectory-controller (2.45.0-1jammy.20250514.163433) ...
+Setting up ros-humble-picknik-reset-fault-controller (0.0.3-1jammy.20250429.213923) ...
+Setting up ros-humble-robotiq-description (0.0.1-1jammy.20250514.172856) ...
+Setting up ros-humble-picknik-twist-controller (0.0.3-1jammy.20250429.213934) ...
+Setting up ros-humble-kortex-description (0.2.3-1jammy.20250514.173022) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ros-humble-robotiq-description is already the newest version (0.0.1-1jammy.20250514.172856).
+ros-humble-robotiq-description set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 133 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  ros-humble-ur-description
+0 upgraded, 1 newly installed, 0 to remove and 133 not upgraded.
+Need to get 20.7 MB of archives.
+After this operation, 69.5 MB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main amd64 ros-humble-ur-description amd64 2.5.0-1jammy.20250514.172934 [20.7 MB]
+Fetched 20.7 MB in 10s (2127 kB/s)
+Selecting previously unselected package ros-humble-ur-description.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 143504 files and directories currently installed.)
+Preparing to unpack .../ros-humble-ur-description_2.5.0-1jammy.20250514.172934_amd64.deb ...
+Unpacking ros-humble-ur-description (2.5.0-1jammy.20250514.172934) ...
+Setting up ros-humble-ur-description (2.5.0-1jammy.20250514.172934) ...
+[1mexecuting command [apt-get install -y ros-humble-generate-parameter-library][0m
+[1mexecuting command [apt-get install -y ros-humble-ros-testing][0m
+[1mexecuting command [apt-get install -y ros-humble-behaviortree-cpp][0m
+[1mexecuting command [apt-get install -y ros-humble-ros-gz-sim][0m
+[1mexecuting command [apt-get install -y ros-humble-nav2-common][0m
+[1mexecuting command [apt-get install -y ros-humble-ros-gz-bridge][0m
+[1mexecuting command [apt-get install -y python3-click][0m
+[1mexecuting command [apt-get install -y ros-humble-diff-drive-controller][0m
+[1mexecuting command [apt-get install -y ros-humble-imu-sensor-broadcaster][0m
+[1mexecuting command [apt-get install -y ros-humble-joint-state-broadcaster][0m
+[1mexecuting command [apt-get install -y ros-humble-joint-state-publisher][0m
+[1mexecuting command [apt-get install -y ros-humble-joint-state-publisher-gui][0m
+[1mexecuting command [apt-get install -y ros-humble-nmea-navsat-driver][0m
+[1mexecuting command [apt-get install -y python3-transforms3d][0m
+[1mexecuting command [apt-get install -y ros-humble-robot-localization][0m
+[1mexecuting command [apt-get install -y ros-humble-imu-filter-madgwick][0m
+[1mexecuting command [apt-get install -y ros-humble-phidgets-api][0m
+[1mexecuting command [apt-get install -y autoconf-archive][0m
+[1mexecuting command [apt-get install -y libtool][0m
+[1mexecuting command [apt-get install -y libtool-bin][0m
+[1mexecuting command [apt-get install -y iputils-ping][0m
+[1mexecuting command [apt-get install -y ros-humble-kortex-description][0m
+[1mexecuting command [apt-get install -y ros-humble-robotiq-description][0m
+[1mexecuting command [apt-get install -y ros-humble-ur-description][0m
+#All required rosdeps installed successfully
+Building with colcon...
+Starting >>> husarion_ugv_utils
+Starting >>> btcpp_ros2_interfaces
+Starting >>> husarion_ugv_msgs
+Starting >>> ros_components_description
+Starting >>> mecanum_drive_controller
+Starting >>> husarion_gz_worlds
+Finished <<< husarion_gz_worlds [0.21s]
+Finished <<< ros_components_description [0.25s]
+Starting >>> husarion_ugv_description
+Finished <<< mecanum_drive_controller [0.36s]
+Finished <<< husarion_ugv_description [0.24s]
+Finished <<< husarion_ugv_utils [0.68s]
+Starting >>> husarion_ugv_localization
+Starting >>> husarion_ugv_controller
+Finished <<< btcpp_ros2_interfaces [0.74s]
+Starting >>> behaviortree_ros2
+Finished <<< husarion_ugv_msgs [0.77s]
+Starting >>> husarion_ugv_lights
+Finished <<< husarion_ugv_localization [0.16s]
+Finished <<< husarion_ugv_controller [0.19s]
+Finished <<< behaviortree_ros2 [0.25s]
+Starting >>> husarion_ugv_manager
+Finished <<< husarion_ugv_lights [0.24s]
+Finished <<< husarion_ugv_manager [0.25s]
+Starting >>> husarion_ugv_gazebo
+Finished <<< husarion_ugv_gazebo [0.18s]
+Starting >>> husarion_ugv
+Finished <<< husarion_ugv [0.09s]
+
+Summary: 14 packages finished [1.79s]
+Setup complete.
