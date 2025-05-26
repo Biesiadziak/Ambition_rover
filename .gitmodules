@@ -1,4 +1,4 @@
 [submodule "src/husarion_ugv_ros"]
 	path = src/husarion_ugv_ros
 	url = https://github.com/husarion/husarion_ugv_ros.git
-	branch = ros2
+	branch = humble-devel
