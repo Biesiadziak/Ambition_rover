@@ -1,23 +1,27 @@
+---
 # 🚀 CybAiR Rover
+
 ## MPPI control (TSwR Project)
+
 A simulation project of a simple rover in the ROS2 environment, using the MPPI algorithm for autonomous navigation.
 
 ## 🛠️ Features (TODO)
 
-- 🔧 **URDF** – creation of a simplified rover model in URDF format  
-- 🗺️ **Costmap** – using a ready-made costmap for path planning  
-- 📍 **Goal Selection** – manual selection of a target point on the map  
-- 🤖 **MPPI Navigation** – reaching the selected point using the Model Predictive Path Integral (MPPI) algorithm
+* 🔧 **URDF** – creation of a simplified rover model in URDF format
+* 🗺️ **Costmap** – using a ready-made costmap for path planning
+* 📍 **Goal Selection** – manual selection of a target point on the map
+* 🤖 **MPPI Navigation** – reaching the selected point using the Model Predictive Path Integral (MPPI) algorithm
 
 ## 📦 Requirements
 
-- ROS 2 (e.g., Humble)
-- Gazebo / RViz
-- Packages for MPPI and costmap support:
-  - `nav2_mppi_controller`
-  - `nav2_costmap_2d`
-  - `rviz2`
-  - `gazebo_ros`
+* ROS 2 (e.g., Humble)
+* Gazebo / RViz
+* Packages for MPPI and costmap support:
+
+  * `nav2_mppi_controller`
+  * `nav2_costmap_2d`
+  * `rviz2`
+  * `gazebo_ros`
 
 # Clone repository
 
@@ -54,3 +58,19 @@ To launch the RealSense camera node with point cloud enabled, run:
 ```bash
 ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
 ```
+
+---
+
+# 🏞️ Gazebo Simulation
+
+## 🚀 Start the Simulation
+
+To launch the simulation environment with the Mars Yard 2024 world in Gazebo, run:
+
+```bash
+ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world
+```
+
+This command initializes the Gazebo simulation using your custom Mars Yard world.
+
+---
