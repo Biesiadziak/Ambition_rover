@@ -32,7 +32,7 @@ git clone --recurse-submodules https://github.com/Biesiadziak/Ambition_rover.git
 Run the following command in the main project folder to build the Docker image:
 
 ```bash
-docker build -t ambition_humble .devcontainer/
+docker build -t ambition_humble .
 ```
 
 ## ▶️ Start the Container
