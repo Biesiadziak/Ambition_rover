@@ -1,4 +1,4 @@
-FROM osrf/ros:humble-desktop
+FROM osrf/ros:jazzy-desktop
 
 RUN apt-get update
 
@@ -11,29 +11,34 @@ RUN apt-get install -y \
 	python3-pip \
 	python3-tk \
 	python3-vcstool \
-	python3-colcon-common-extensions \
-	python3-ament-package
+	python3-colcon-common-extensions
 
 # tools
 RUN apt update && apt install -y \
-	ros-humble-gtsam \
-	ros-humble-realtime-tools \
-	ros-humble-behaviortree-cpp-v3 \
-	ros-humble-rcpputils \
-	ros-humble-rosidl-typesupport-c \
-	ros-humble-gz-ros2-control \
-	ros-humble-controller-manager
+	ros-jazzy-gtsam \
+	ros-jazzy-realtime-tools \
+	ros-jazzy-behaviortree-cpp-v3 \
+	ros-jazzy-rcpputils \
+	ros-jazzy-rosidl-typesupport-c \
+	ros-jazzy-gz-ros2-control \
+	ros-jazzy-controller-manager
 	
 # sensors pkgs
 RUN apt-get update && apt-get install -y \
-	ros-humble-librealsense2* \
-	ros-humble-realsense2-* \
+	ros-jazzy-librealsense2* \
+	ros-jazzy-realsense2-* \
 	build-essential cmake pkg-config \
 	libusb-1.0-0-dev \
 	libturbojpeg0-dev 
-
+	
+RUN apt-get update && apt-get install -y \
+        #libgl1-mesa-glx \
+        mesa-utils
+		
+# nvidia pkgs comment out if not using nvidia gpu
+RUN apt-get update && apt-get install -y \
+	nvidia-utils-550 \
+    libglvnd0 \
+    libnvidia-gl-550
+	
 WORKDIR /root/ros2_ws
-
-# Optionally copy the setup script into the image (so it's always available)
-COPY setup-workspace.sh /root/setup-workspace.sh
-RUN chmod +x /root/setup-workspace.sh
