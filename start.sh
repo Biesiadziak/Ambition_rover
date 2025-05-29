@@ -11,7 +11,7 @@ else
 fi
 
 # Start the container
-docker run -d \
+docker run -itd --rm \
   --name=ambition_humble \
   --shm-size=1g \
   --ulimit memlock=-1 \
@@ -20,7 +20,8 @@ docker run -d \
   --env="DISPLAY=$DISPLAY" \
   --network=host \
   --privileged \
-  ambition_humble tail -f /dev/null  # keep it running in background
+  --gpus all \
+  ambition_humble
 
 # Run the setup script inside
-docker exec -it ambition_humble bash -c "/root/setup-workspace.sh | tee /root/ros2_ws/log.txt"
+docker exec -it ambition_humble bash -c "/root/ros2_ws/.devcontainer/setup-workspace.sh && bash"
