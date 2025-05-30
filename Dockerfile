@@ -1,14 +1,12 @@
 FROM osrf/ros:humble-desktop
 
-RUN apt-get update
-
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
     HUSARION_ROS_BUILD_TYPE=simulation \
     ROS_DISTRO=humble
 
 # base pkgs
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	git \
 	gedit \
 	nano \

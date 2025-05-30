@@ -63,4 +63,4 @@ ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
 To launch the simulation environment with the Mars Yard 2024 world in Gazebo, run:
 
 ```bash
-ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world
+ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world components_config_path:=/root/ros2_ws/config/components.yaml

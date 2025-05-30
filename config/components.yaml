@@ -1,0 +1,42 @@
+# By default Husarion UGV is loaded without any components.
+
+components: []
+
+# If you want to add for example DEV02, LDR06 and CAM01 to your Panther look at this example below:
+
+components:
+#   - type: DEV02
+
+#   - type: LDR06
+#     parent_link: mount_link
+#     xyz: 0.0 -0.1 0.0
+#     rpy: 0.0 0.0 0.0
+#     device_namespace: second_lidar
+
+  - type: CAM06
+    name: front_camera
+    parent_link: mount_link
+    xyz: 0.1 0.0 0.0
+    rpy: 0.0 0.0 0.0
+    device_namespace: front_cam
+
+  - type: CAM06
+    name: left_camera
+    parent_link: mount_link
+    xyz: 0.0 0.2 0.0
+    rpy: 0.0 0.0 1.57
+    device_namespace: left_cam
+
+  - type: CAM06
+    name: right_camera
+    parent_link: mount_link
+    xyz: 0.0 -0.2 0.0
+    rpy: 0.0 0.0 -1.57
+    device_namespace: right_cam
+
+  - type: CAM06
+    name: back_camera
+    parent_link: mount_link
+    xyz: -0.1 0.0 0.0
+    rpy: 0.0 0.0 3.14
+    device_namespace: back_cam
