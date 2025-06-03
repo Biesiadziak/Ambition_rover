@@ -1,0 +1,17 @@
+teleop_twist_joy_node:
+  ros__parameters:
+    axis_linear: 1               # Typically left stick vertical
+    axis_angular: 0              # Typically left stick horizontal
+    scale_linear: 0.5
+    scale_linear_turbo: 1.0
+    scale_angular: 1.0
+    scale_angular_turbo: 2.0
+
+    enable_button: 4            # Shoulder button (e.g., L1)
+    turbo_button: 5             # Optional: R1
+
+    require_enable_button: true
+    deadman_timeout: 0.5
+
+    deadzone_linear: 0.1
+    deadzone_angular: 0.1

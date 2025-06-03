@@ -64,3 +64,20 @@ To launch the simulation environment with the Mars Yard 2024 world in Gazebo, ru
 
 ```bash
 ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world components_config_path:=/root/ros2_ws/config/components.yaml
+```
+
+## 🎮 Teleoperation
+
+To control the robot using a joystick:
+
+### Step 1: Start the joystick driver
+
+```bash
+ros2 run joy joy_node
+```
+
+### Step 2: Start the teleop twist controller
+
+```bash
+ros2 run teleop_twist_joy teleop_node --ros-args --params-file config/teleop_joy.yaml
+```

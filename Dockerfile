@@ -20,18 +20,19 @@ RUN apt-get update && apt-get install -y \
 
 # tools
 RUN apt update && apt install -y \
-	ros-humble-gtsam \
-	ros-humble-realtime-tools \
-	ros-humble-behaviortree-cpp-v3 \
-	ros-humble-rcpputils \
-	ros-humble-rosidl-typesupport-c \
-	ros-humble-gz-ros2-control \
-	ros-humble-controller-manager
+	ros-${ROS_DISTRO}-gtsam \
+	ros-${ROS_DISTRO}-realtime-tools \
+	ros-${ROS_DISTRO}-behaviortree-cpp-v3 \
+	ros-${ROS_DISTRO}-rcpputils \
+	ros-${ROS_DISTRO}-rosidl-typesupport-c \
+	ros-${ROS_DISTRO}-gz-ros2-control \
+	ros-${ROS_DISTRO}-controller-manager \
+	ros-${ROS_DISTRO}-joy
 	
 # sensors pkgs
 RUN apt-get update && apt-get install -y \
-	ros-humble-librealsense2* \
-	ros-humble-realsense2-* \
+	ros-${ROS_DISTRO}-librealsense2* \
+	ros-${ROS_DISTRO}-realsense2-* \
 	build-essential cmake pkg-config \
 	libusb-1.0-0-dev \
 	libturbojpeg0-dev 
