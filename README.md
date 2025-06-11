@@ -81,3 +81,13 @@ ros2 run joy joy_node
 ```bash
 ros2 run teleop_twist_joy teleop_node --ros-args --params-file config/teleop_joy.yaml
 ```
+
+## Mapping terrain
+
+To start mapping terrain using only front camera:
+
+```bash
+ros2 launch rtabmap_launch rtabmap.launch.py     rtabmap_args:="--delete_db_on_start"     rgb_topic:=/front_cam/zed_node/rgb/image_rect_color     depth_topic:=/front_cam/zed_node/depth     camera_info_topic:=/front_cam/zed_node/rgb/camera_info     frame_id:=base_link     approx_sync:=false     wait_imu_to_init:=true     imu_topic:=/imu/data  
+```
+
+In order to visualize occupancy map in rviz subscribe to topic /rtabmap/octomap_grid
