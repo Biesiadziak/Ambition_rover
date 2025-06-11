@@ -27,7 +27,8 @@ RUN apt update && apt install -y \
 	ros-${ROS_DISTRO}-rosidl-typesupport-c \
 	ros-${ROS_DISTRO}-gz-ros2-control \
 	ros-${ROS_DISTRO}-controller-manager \
-	ros-${ROS_DISTRO}-joy
+	ros-${ROS_DISTRO}-joy \
+	ros-${ROS_DISTRO}-rtabmap-ros
 	
 # sensors pkgs
 RUN apt-get update && apt-get install -y \
