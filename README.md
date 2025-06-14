@@ -65,7 +65,11 @@ To launch the simulation environment with the Mars Yard 2024 world in Gazebo, ru
 ```bash
 ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world components_config_path:=/root/ros2_ws/config/components.yaml use_sim_time:=true
 ```
+To check which QoS settings to change in rviz, run and check:
 
+```bash
+ros2 topic info /rtabmap/map --verbose
+```
 ## 🎮 Teleoperation
 
 To control the robot using a joystick:
@@ -91,3 +95,4 @@ ros2 launch rtabmap_launch rtabmap.launch.py   rtabmap_args:="--delete_db_on_sta
 ```
 
 In order to visualize occupancy map in rviz subscribe to topic /rtabmap/octomap_grid
+
