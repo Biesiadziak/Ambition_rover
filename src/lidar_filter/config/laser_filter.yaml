@@ -1,0 +1,8 @@
+laser_filter_chain:
+  ros__parameters:
+    filter1:
+      name: angle_crop_filter
+      type: LaserScanAngularBoundsFilter
+      params:
+        lower_angle: -1.57    # -90°
+        upper_angle: 1.57     # +90°

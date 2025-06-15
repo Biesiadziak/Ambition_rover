@@ -12,7 +12,7 @@ fi
 
 # Start the container
 docker run -itd --rm \
-  --name=ambition_humble \
+  --name=ambition_jazzy \
   --shm-size=1g \
   --ulimit memlock=-1 \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix" \
@@ -20,8 +20,7 @@ docker run -itd --rm \
   --env="DISPLAY=$DISPLAY" \
   --network=host \
   --privileged \
-  --gpus all \
-  ambition_humble
+  ambition_jazzy
 
 # Run the setup script inside
-docker exec -it ambition_humble bash -c "/root/ros2_ws/.devcontainer/setup-workspace.sh && bash"
+docker exec -it ambition_jazzy bash -c "/root/ros2_ws/.devcontainer/setup-workspace.sh && bash"

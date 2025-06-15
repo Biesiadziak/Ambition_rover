@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Sourcing ROS..."
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 
 cd /root/ros2_ws
 

@@ -86,6 +86,43 @@ ros2 run joy joy_node
 ros2 run teleop_twist_joy teleop_node --ros-args --params-file config/teleop_joy.yaml
 ```
 
+---
+
+# Exploration
+
+## 🧭 SLAM Toolbox (Alternative Mapping)
+
+To start SLAM using SLAM Toolbox with asynchronous mode:
+
+```bash
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=config/mapper_params_online_async.yaml
+```
+
+## 🧠 Navigation Stack
+
+To launch the full Navigation2 stack with custom parameters:
+
+```bash
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true params_file:=config/nav2_params.yaml
+```
+
+## 🔧 Twist Tools
+
+To convert raw twist messages to stamped twist messages:
+
+```bash
+ros2 run my_twist_tools twist_to_stamped
+```
+
+## 🧭 Autonomous Exploration
+
+To launch the custom exploration node:
+
+```bash
+ros2 run custom_explorer explorer
+```
+
+# NIE AKTUALNE
 ## Mapping terrain
 
 To start mapping terrain using only front camera:
@@ -95,4 +132,3 @@ ros2 launch rtabmap_launch rtabmap.launch.py   rtabmap_args:="--delete_db_on_sta
 ```
 
 In order to visualize occupancy map in rviz subscribe to topic /rtabmap/octomap_grid
-

@@ -1,17 +1,15 @@
 
 
-FROM osrf/ros:humble-desktop
+FROM osrf/ros:jazzy-desktop
 
 
 #
 # W: GPG error: http://packages.ros.org/ros2/ubuntu jammy InRelease: The following signatures were invalid: EXPKEYSIG F42..654 Open Robotics <info@osrfoundation.org>
 # To solve this issue, uncomment the code below:
 #RUN rm /etc/apt/sources.list.d/ros2-latest.list \
-#  && rm /usr/share/keyrings/ros2-latest-archive-keyring.gpg
-#
+#    && rm /usr/share/keyrings/ros2-latest-archive-keyring.gpg#
 #RUN apt-get update \
-#  && apt-get install -y ca-certificates curl
-#
+#    && apt-get install -y ca-certificates curl#
 #RUN export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}') ;\
 #    curl -L -s -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" \
 #    && apt-get update \
@@ -22,7 +20,7 @@ FROM osrf/ros:humble-desktop
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
     HUSARION_ROS_BUILD_TYPE=simulation \
-    ROS_DISTRO=humble
+    ROS_DISTRO=jazzy
 
 # base pkgs
 RUN apt-get update && apt-get install -y \
@@ -34,12 +32,12 @@ RUN apt-get update && apt-get install -y \
 	python3-tk \
 	python3-vcstool \
 	python3-colcon-common-extensions \
-	python3-ament-package \
+#	python3-ament-package \
 	mesa-utils
 
 # tools
 RUN apt update && apt install -y \
-	ros-${ROS_DISTRO}-gtsam \
+#	ros-${ROS_DISTRO}-gtsam \
 	ros-${ROS_DISTRO}-realtime-tools \
 	ros-${ROS_DISTRO}-behaviortree-cpp-v3 \
 	ros-${ROS_DISTRO}-rcpputils \
@@ -83,6 +81,6 @@ RUN rosdep install --from-paths src -y -i --rosdistro $ROS_DISTRO
 
 # Source ROS and workspace setup scripts in any new shell
 SHELL ["/bin/bash", "-c"]
-RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+RUN echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
 CMD ["bash"]
