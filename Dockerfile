@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
 	python3-vcstool \
 	python3-colcon-common-extensions \
 	python3-sklearn \
+	python3-numpy \
 #	python3-ament-package \
 	mesa-utils
 
@@ -77,6 +78,11 @@ RUN vcs import src < src/husarion_ugv_ros/husarion_ugv/${HUSARION_ROS_BUILD_TYPE
 
 # Install ROS package dependencies
 RUN rosdep install --from-paths src -y -i --rosdistro $ROS_DISTRO
+
+RUN git config --global --add safe.directory /root/ros2_ws/src/behaviortree_ros2 && \
+    git config --global --add safe.directory /root/ros2_ws/src/husarion_controllers && \
+    git config --global --add safe.directory /root/ros2_ws/src/husarion_gz_worlds && \
+    git config --global --add safe.directory /root/ros2_ws/src/ros_components_description
 
 # # Build the workspace
 # RUN . /opt/ros/humble/setup.sh && \
