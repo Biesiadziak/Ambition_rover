@@ -153,10 +153,3 @@ use_sim_time:=true
 > `/rtabmap/octomap_grid`
 
 ---
-
-## 📽️ Demo Video (If available)
-
-🎬 *Coming soon* – or insert your link here:  
-[Watch demo on YouTube](https://your-demo-link)
-
----
