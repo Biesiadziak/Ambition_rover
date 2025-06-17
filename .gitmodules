@@ -2,3 +2,6 @@
 	path = src/husarion_ugv_ros
 	url = https://github.com/husarion/husarion_ugv_ros.git
 	branch = ros2
+[submodule "src/Explorer"]
+	path = src/Explorer
+	url = https://github.com/Biesiadziak/Autonomous-Explorer.git

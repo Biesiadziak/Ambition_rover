@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y \
 	python3-tk \
 	python3-vcstool \
 	python3-colcon-common-extensions \
+	python3-sklearn \
 #	python3-ament-package \
 	mesa-utils
 
@@ -45,7 +46,9 @@ RUN apt update && apt install -y \
 	ros-${ROS_DISTRO}-gz-ros2-control \
 	ros-${ROS_DISTRO}-controller-manager \
 	ros-${ROS_DISTRO}-joy \
-	ros-${ROS_DISTRO}-rtabmap-ros
+	ros-${ROS_DISTRO}-rtabmap-ros \
+	ros-${ROS_DISTRO}-nav2-bringup \
+	ros-${ROS_DISTRO}-slam-toolbox
 	
 # sensors pkgs
 RUN apt-get update && apt-get install -y \

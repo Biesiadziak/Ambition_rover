@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git config --global --add safe.directory /root/ros2_ws/src
+
 echo "Sourcing ROS..."
 source /opt/ros/jazzy/setup.bash
 
