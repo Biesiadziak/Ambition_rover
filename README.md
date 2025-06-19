@@ -118,6 +118,12 @@ ros2 run custom_explorer explorer
 
 ---
 
+## Visual Odometry
+
+```bash
+ros2 run rtabmap_odom rgbd_odometry --ros-args   -p frame_id:=base_link   -p odom_frame_id:=odom   -p publish_tf:=true   -r rgb/image:=/front_cam/zed_node/rgb/image_rect_color   -r depth/image:=/front_cam/zed_node/depth   -r rgb/camera_info:=/front_cam/zed_node/rgb/camera_info   -r odom:=/vo_odom -r approx_sync:=true -r use_sim_time:=true -p approx_sync_max_interval:=0.015
+```
+---
 # 🎥 RealSense Camera Support
 
 ## 🌫️ Launch with Point Cloud

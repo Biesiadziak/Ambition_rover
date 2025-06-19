@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y \
 
 # tools
 RUN apt update && apt install -y \
-#	ros-${ROS_DISTRO}-gtsam \
+	ros-${ROS_DISTRO}-gtsam \
 	ros-${ROS_DISTRO}-realtime-tools \
 	ros-${ROS_DISTRO}-behaviortree-cpp-v3 \
 	ros-${ROS_DISTRO}-rcpputils \
