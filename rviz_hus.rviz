@@ -3,7 +3,10 @@ Panels:
     Help Height: 78
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /Global Options1
+        - /Map2/Update Topic1
+        - /Odometry1/Status1
       Splitter Ratio: 0.5
     Tree Height: 654
   - Class: rviz_common/Selection
@@ -108,6 +111,35 @@ Visualization Manager:
               Alpha: 1
               Show Axes: false
               Show Trail: false
+            front_cam_center:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            front_cam_center_optical_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            front_cam_left_camera_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            front_cam_left_camera_optical_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            front_cam_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            front_cam_right_camera_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            front_cam_right_camera_optical_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
             imu_link:
               Alpha: 1
               Show Axes: false
@@ -120,15 +152,6 @@ Visualization Manager:
               Alpha: 1
               Show Axes: false
               Show Trail: false
-            main_lidar_laser:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-            main_lidar_slamtec_rplidar_link:
-              Alpha: 1
-              Show Axes: false
-              Show Trail: false
-              Value: true
             mount_link:
               Alpha: 1
               Show Axes: false
@@ -225,12 +248,12 @@ Visualization Manager:
       Binary threshold: 100
       Class: rviz_default_plugins/Map
       Color Scheme: map
-      Draw Behind: false
-      Enabled: false
+      Draw Behind: true
+      Enabled: true
       Name: Map
       Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
@@ -242,14 +265,14 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /map_updates
       Use Timestamp: false
-      Value: false
+      Value: true
     - Alpha: 0.699999988079071
       Binary representation: false
       Binary threshold: 100
       Class: rviz_default_plugins/Map
       Color Scheme: costmap
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic:
         Depth: 5
@@ -265,12 +288,12 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /global_costmap/costmap_updates
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz_default_plugins/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.30000001192092896
       Head Length: 0.20000000298023224
       Length: 0.30000001192092896
@@ -293,6 +316,45 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /plan
+      Value: false
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz_default_plugins/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 100
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /fused/odom
       Value: true
   Enabled: true
   Global Options:
@@ -340,25 +402,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 22.081966400146484
+      Distance: 37.035499572753906
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.4804121255874634
-        Y: 0.02658408135175705
-        Z: -1.4432125091552734
+        X: 1.3226228952407837
+        Y: 3.1411538124084473
+        Z: -1.6751627922058105
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8547970056533813
+      Pitch: 0.9297971725463867
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 3.142364025115967
+      Yaw: 3.0923566818237305
     Saved: ~
 Window Geometry:
   Displays:

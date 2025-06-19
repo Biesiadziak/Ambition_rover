@@ -58,6 +58,11 @@ Run the main exploration launch file:
 ros2 launch ambition_launcher ambition_launch.py
 ```
 
+## 🤖 Launch Localisation
+
+```bash
+ros2 launch localisation_py localisation.launch.py
+```
 ---
 
 # 🎮 Manual Teleoperation (Joystick)
