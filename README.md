@@ -1,134 +1,161 @@
 # 🚀 CybAiR Rover
-## MPPI control (TSwR Project)
-A simulation project of a simple rover in the ROS2 environment, using the MPPI algorithm for autonomous navigation.
+## 🗺️ Map Exploration | TSwR Project
 
-## 🛠️ Features (TODO)
+A simulation project of an autonomous rover in a ROS 2 (Jazzy) environment, using the **Nav2** and **SLAM Toolbox** for real-time navigation and environment exploration.
 
-- 🔧 **URDF** – creation of a simplified rover model in URDF format  
-- 🗺️ **Costmap** – using a ready-made costmap for path planning  
-- 📍 **Goal Selection** – manual selection of a target point on the map  
-- 🤖 **MPPI Navigation** – reaching the selected point using the Model Predictive Path Integral (MPPI) algorithm
+---
 
-## 📦 Requirements
+## 📦 Clone the Repository
 
-- ROS 2 (e.g., Humble)
-- Gazebo / RViz
-- Packages for MPPI and costmap support:
-  - `nav2_mppi_controller`
-  - `nav2_costmap_2d`
-  - `rviz2`
-  - `gazebo_ros`
-
-# Clone repository
+Make sure to include submodules:
 
 ```bash
-git clone --recurse-submodules https://github.com/Biesiadziak/Ambition_rover.git
+git clone --recurse-submodules https://github.com/Biesiadziak/Ambition_rover.git --branch=ts_projekt
 ```
 
-# 🐳 Docker Setup
+---
+
+# 🐳 Docker-Based Setup
 
 ## 🛠️ Build the Docker Image
 
-Run the following command in the main project folder to build the Docker image:
+Run this in the root of the project directory:
 
 ```bash
-docker build -t ambition_humble .
+docker build -t ambition_jazzy .
 ```
 
-## ▶️ Start the Container
+## ▶️ Start the Docker Container
 
-To start the container, execute:
+Launch the pre-configured container:
 
 ```bash
 ./start.sh
 ```
 
+> 📌 This script sets up the ROS 2 workspace and enters the container shell.
+
 ---
 
-# 🎥 RealSense Camera
+# 🏞️ Simulation Environment
 
-## 🌫️ Launch Camera Node with Point Cloud
+## 🚀 Start Gazebo
 
-To launch the RealSense camera node with point cloud enabled, run:
+Launch the simulation world:
 
 ```bash
-ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
+ros2 launch husarion_ugv_gazebo simulation.launch.py \
+components_config_path:=/root/ros2_ws/config/components.yaml \
+rviz_config:=/root/ros2_ws/rviz_hus.rviz \
+use_sim_time:=true
 ```
+
+## 🤖 Launch Autonomous Exploration
+
+Run the main exploration launch file:
+
+```bash
+ros2 launch ambition_launcher ambition_launch.py
+```
+
 ---
 
-# 🏞️ Gazebo Simulation
+# 🎮 Manual Teleoperation (Joystick)
 
-## 🚀 Start the Simulation
-
-To launch the simulation environment with the Mars Yard 2024 world in Gazebo, run:
-
-```bash
-ros2 launch husarion_ugv_gazebo simulation.launch.py gz_world:=/root/ros2_ws/worlds/marsyard2024.world components_config_path:=/root/ros2_ws/config/components.yaml use_sim_time:=true
-```
-To check which QoS settings to change in rviz, run and check:
-
-```bash
-ros2 topic info /rtabmap/map --verbose
-```
-## 🎮 Teleoperation
-
-To control the robot using a joystick:
-
-### Step 1: Start the joystick driver
+## Step 1: Start Joystick Driver
 
 ```bash
 ros2 run joy joy_node
 ```
 
-### Step 2: Start the teleop twist controller
+## Step 2: Start Teleop Node
 
 ```bash
-ros2 run teleop_twist_joy teleop_node --ros-args --params-file config/teleop_joy.yaml
+ros2 run teleop_twist_joy teleop_node \
+--ros-args --params-file config/teleop_joy.yaml
 ```
+
+> 🕹️ This lets you manually control the rover via joystick.
 
 ---
 
-# Exploration
+# 🧠 ROS Navigation & Mapping (Advanced)
 
-## 🧭 SLAM Toolbox (Alternative Mapping)
+## 🗺️ SLAM Toolbox (Optional Mapping)
 
-To start SLAM using SLAM Toolbox with asynchronous mode:
-
-```bash
-ros2 launch slam_toolbox online_async_launch.py slam_params_file:=config/mapper_params_online_async.yaml
-```
-
-## 🧠 Navigation Stack
-
-To launch the full Navigation2 stack with custom parameters:
+To run SLAM in asynchronous mode:
 
 ```bash
-ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true params_file:=config/nav2_params.yaml
+ros2 launch slam_toolbox online_async_launch.py \
+slam_params_file:=config/mapper_params_online_async.yaml
 ```
 
-## 🔧 Twist Tools
+## 🧭 Navigation2 Stack
 
-To convert raw twist messages to stamped twist messages:
+To manually launch the navigation stack with custom config:
+
+```bash
+ros2 launch nav2_bringup navigation_launch.py \
+use_sim_time:=true \
+params_file:=config/nav2_params.yaml
+```
+
+## 🔧 Twist Conversion Tool
+
+Convert raw `Twist` messages into `TwistStamped`:
 
 ```bash
 ros2 run my_twist_tools twist_to_stamped
 ```
 
-## 🧭 Autonomous Exploration
+## 🤖 Direct Explorer Node Launch
 
-To launch the custom exploration node:
+If you want to run the exploration algorithm directly:
 
 ```bash
 ros2 run custom_explorer explorer
 ```
 
-# NIE AKTUALNE
-## Mapping terrain
+---
 
-To start mapping terrain using only front camera:
+## Visual Odometry
 
 ```bash
-ros2 launch rtabmap_launch rtabmap.launch.py   rtabmap_args:="--delete_db_on_start"   rgb_topic:=/front_cam/zed_node/rgb/image_rect_color   depth_topic:=/front_cam/zed_node/depth   camera_info_topic:=/front_cam/zed_node/rgb/camera_info   frame_id:=base_link   approx_sync:=true   wait_imu_to_init:=true   imu_topic:=/imu/data   use_sim_time:=true
+ros2 run rtabmap_odom rgbd_odometry --ros-args   -p frame_id:=base_link   -p odom_frame_id:=odom   -p publish_tf:=true   -r rgb/image:=/front_cam/zed_node/rgb/image_rect_color   -r depth/image:=/front_cam/zed_node/depth   -r rgb/camera_info:=/front_cam/zed_node/rgb/camera_info   -r odom:=/vo_odom -r approx_sync:=true -r use_sim_time:=true -p approx_sync_max_interval:=0.015
+```
+---
+# 🎥 RealSense Camera Support
+
+## 🌫️ Launch with Point Cloud
+
+Enable RealSense camera with point cloud publishing:
+
+```bash
+ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
 ```
 
-In order to visualize occupancy map in rviz subscribe to topic /rtabmap/octomap_grid
+---
+
+# ⚠️ Legacy
+
+## RTAB-Map Mapping (Deprecated)
+
+Launch RTAB-Map with front camera only:
+
+```bash
+ros2 launch rtabmap_launch rtabmap.launch.py \
+rtabmap_args:="--delete_db_on_start" \
+rgb_topic:=/front_cam/zed_node/rgb/image_rect_color \
+depth_topic:=/front_cam/zed_node/depth \
+camera_info_topic:=/front_cam/zed_node/rgb/camera_info \
+frame_id:=base_link \
+approx_sync:=true \
+wait_imu_to_init:=true \
+imu_topic:=/imu/data \
+use_sim_time:=true
+```
+
+> 🧱 To visualize the occupancy grid in RViz, subscribe to:  
+> `/rtabmap/octomap_grid`
+
+---

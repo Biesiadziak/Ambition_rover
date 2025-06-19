@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git config --global --add safe.directory /root/ros2_ws/src
-
 echo "Sourcing ROS..."
 source /opt/ros/jazzy/setup.bash
 
@@ -20,5 +18,6 @@ rosdep install --from-paths src -y -i
 
 echo "Building with colcon..."
 colcon build --symlink-install --packages-up-to husarion_ugv --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
+colcon build --symlink-install --packages-select my_twist_tools custom_explorer ambition_launcher
 
 echo "Setup complete."
