@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
 	python3-colcon-common-extensions \
 	python3-sklearn \
 	python3-numpy \
+	python3-gtsam \
 #	python3-ament-package \
 	mesa-utils
 
